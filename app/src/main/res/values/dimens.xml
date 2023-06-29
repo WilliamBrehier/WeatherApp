@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_vertical_margin">100dp</dimen>
+    <dimen name="h1">32sp</dimen>
+    <dimen name="h2">16sp</dimen>
+    <dimen name="temp_size">48sp</dimen>
+</resources>
