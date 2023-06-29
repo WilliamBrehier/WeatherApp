@@ -3,4 +3,5 @@
     <string name="city_name">New York</string>
     <string name="city_desc">Sunny M</string>
     <string name="city_temp">75.2°F</string>
+    <string name="favorite">Favorite</string>
 </resources>
