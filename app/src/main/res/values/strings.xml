@@ -4,4 +4,5 @@
     <string name="city_desc">Sunny M</string>
     <string name="city_temp">75.2°F</string>
     <string name="favorite">Favorite</string>
+    <string name="no_internet">No Internet Connection</string>
 </resources>
