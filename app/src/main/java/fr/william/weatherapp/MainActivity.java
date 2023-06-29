@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     private View mViewApp;
     private TextView mTextViewNoInternet;
     private Button mButtonFavorite;
+    private Button mButton2;
 
 
     @Override
@@ -38,10 +39,22 @@ public class MainActivity extends AppCompatActivity {
             mButtonFavorite = findViewById(R.id.button_favorite);
             mButtonFavorite.setVisibility(Button.GONE);
 
+            mButton2 = findViewById(R.id.button_2);
+            mButton2.setVisibility(Button.GONE);
+
 
             mTextViewNoInternet = findViewById(R.id.text_view_no_internet);
             mTextViewNoInternet.setVisibility(TextView.VISIBLE);
             mTextViewNoInternet.setText(getText(R.string.no_internet));
         }
+        mButton2 = findViewById(R.id.button_2);
+        mButton2.setOnClickListener(view -> Toast.makeText(MainActivity.this, getText(R.string.onclick2), Toast.LENGTH_SHORT).show());
+    }
+
+    public void onClick1(View view) {
+        Button button = (Button) view;
+        String textButton = button.getText().toString();
+        String message = getString(R.string.ClickOn, textButton);
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
 }

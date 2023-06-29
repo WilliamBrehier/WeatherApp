@@ -6,4 +6,9 @@
     <string name="city_temp">24°C</string>
     <string name="favorite">Favoris</string>
     <string name="no_internet">Pas de connexion Internet</string>
+    <string name="onclick1">Clic sur bouton 1</string>
+    <string name="onclick2">Clic sur bouton 2</string>
+    <string name="bouton_1">Bouton 1</string>
+    <string name="bouton_2">Bouton 2</string>
+    <string name="ClickOn">Clic sur %1$s</string>
 </resources>
