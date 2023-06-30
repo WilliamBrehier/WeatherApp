@@ -11,4 +11,6 @@
     <string name="bouton_1">Bouton 1</string>
     <string name="bouton_2">Bouton 2</string>
     <string name="ClickOn">Clic sur %1$s</string>
+    <string name="Message">Votre message</string>
+    <string name="recover_message">Message : %1$s</string>
 </resources>

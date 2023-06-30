@@ -1,7 +1,8 @@
-package fr.william.weatherapp;
+package fr.william.weatherapp.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
@@ -10,8 +11,12 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import fr.william.weatherapp.R;
+import fr.william.weatherapp.activities.FavoriteActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,11 +24,14 @@ public class MainActivity extends AppCompatActivity {
     private View mViewApp;
     private TextView mTextViewNoInternet;
     private Button mButtonFavorite;
+    private EditText mEditTextMessage;
 
 
+    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.d("TAG", "MainActivity: onCreate()");
         setContentView(R.layout.activity_main);
 
         ConnectivityManager connMgr = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -44,8 +52,7 @@ public class MainActivity extends AppCompatActivity {
             mTextViewNoInternet.setVisibility(TextView.VISIBLE);
             mTextViewNoInternet.setText(getText(R.string.no_internet));
         }
-
-        Log.d("TAG", "MainActivity: onCreate()");
+        mEditTextMessage = findViewById(R.id.edit_text_message);
     }
     @Override
     protected void onStart() {
@@ -90,6 +97,7 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
 
         Intent intent = new Intent(this, FavoriteActivity.class);
+        intent.putExtra("clef", mEditTextMessage.getText().toString());
         startActivity(intent);
     }
 }
