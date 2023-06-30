@@ -4,4 +4,7 @@
     <dimen name="h1">32sp</dimen>
     <dimen name="h2">16sp</dimen>
     <dimen name="temp_size">48sp</dimen>
+    <dimen name="app_bar_height">180dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
 </resources>
